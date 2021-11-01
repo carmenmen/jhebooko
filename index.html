@@ -1,0 +1,133 @@
+<!doctype html>
+<!--[if lt IE 7 ]> <html lang="en" class="ie6"> <![endif]-->
+<!--[if IE 7 ]>    <html lang="en" class="ie7"> <![endif]-->
+<!--[if IE 8 ]>    <html lang="en" class="ie8"> <![endif]-->
+<!--[if IE 9 ]>    <html lang="en" class="ie9"> <![endif]-->
+<!--[if !IE]><!--> <html lang="en"> <!--<![endif]-->
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width = 1050, user-scalable = no" />
+<script type="text/javascript" src="extras/jquery.min.1.7.js"></script>
+<script type="text/javascript" src="extras/modernizr.2.5.3.min.js"></script>
+</head>
+<body>
+<!-- <div id="text">
+    <h1><p>Shhh</p></h1>
+
+</div> -->
+<div class="flipbook-viewport">
+  <div class="container">
+    <div class="flipbook">
+      <div style="background-image:url(pages/1.jpg)"></div>
+      <div style="background-image:url(pages/2.jpg)"></div>
+      <div style="background-image:url(pages/3.jpg)"></div>
+      <div style="background-image:url(pages/4.jpg)"></div>
+      <div style="background-image:url(pages/5.jpg)"></div>
+      <div style="background-image:url(pages/6.jpg)"></div>
+      <div style="background-image:url(pages/7.jpg)"></div>
+      <div style="background-image:url(pages/8.jpg)"></div>
+      <div style="background-image:url(pages/9.jpg)"></div>
+      <div style="background-image:url(pages/10.jpg)"></div>
+      <div style="background-image:url(pages/11.jpg)"></div>
+      <div style="background-image:url(pages/12.jpg)"></div>
+      <div style="background-image:url(pages/13.png)"></div>
+      <div style="background-image:url(pages/14.png)"></div>
+      <div style="background-image:url(pages/15.png)"></div>
+      <div style="background-image:url(pages/16.png)"></div>
+      <div style="background-image:url(pages/17.png)"></div>
+      <div style="background-image:url(pages/18alt.png)">
+        <div id="giffer"><div id="gifferContent"><div id="easy"></div></div></div>
+      </div>
+      <div style="background-image:url(pages/19.png)"></div>
+      <div style="background-image:url(pages/20.png)"></div>
+    </div>
+  </div>
+</div>
+
+
+<script type="text/javascript">
+
+function loadApp() {
+
+  // Create the flipbook
+
+  $('.flipbook').turn({
+      // Width
+
+      width:1200,
+      
+      // Height
+
+      height:600,
+
+      // Elevation
+
+      elevation: 50,
+      
+      // Enable gradients
+
+      gradients: true,
+      
+      // Auto center this flipbook
+
+      autoCenter: true
+
+  });
+}
+
+// Load the HTML4 version if there's not CSS transform
+
+yepnope({
+  test : Modernizr.csstransforms,
+  yep: ['lib/turn.js'],
+  nope: ['lib/turn.html4.min.js'],
+  both: ['css/basic.css'],
+  complete: loadApp
+});
+// dragElement(document.getElementById("text"));
+
+// function dragElement(elmnt) {
+//   var pos1 = 0, pos2 = 0, pos3 = 0, pos4 = 0;
+//   if (document.getElementById(elmnt.id + "text")) {
+//     /* if present, the header is where you move the DIV from:*/
+//     document.getElementById(elmnt.id + "text").onmousedown = dragMouseDown;
+//   } else {
+//     /* otherwise, move the DIV from anywhere inside the DIV:*/
+//     elmnt.onmousedown = dragMouseDown;
+//   }
+
+//   function dragMouseDown(e) {
+//     e = e || window.event;
+//     e.preventDefault();
+//     // get the mouse cursor position at startup:
+//     pos3 = e.clientX;
+//     pos4 = e.clientY;
+//     document.onmouseup = closeDragElement;
+//     // call a function whenever the cursor moves:
+//     document.onmousemove = elementDrag;
+//   }
+
+//   function elementDrag(e) {
+//     e = e || window.event;
+//     e.preventDefault();
+//     // calculate the new cursor position:
+//     pos1 = pos3 - e.clientX;
+//     pos2 = pos4 - e.clientY;
+//     pos3 = e.clientX;
+//     pos4 = e.clientY;
+//     // set the element's new position:
+//     elmnt.style.top = (elmnt.offsetTop - pos2) + "px";
+//     elmnt.style.left = (elmnt.offsetLeft - pos1) + "px";
+//   }
+
+//   function closeDragElement() {
+//     /* stop moving when mouse button is released:*/
+//     document.onmouseup = null;
+//     document.onmousemove = null;
+//   }
+// }
+
+</script>
+
+</body>
+</html>
